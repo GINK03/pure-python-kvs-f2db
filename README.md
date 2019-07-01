@@ -15,13 +15,13 @@ $ pip3 install f2db
 
 ```python
 >>> import f2db
->>> db = f2db.f2db('f2db')
+>>> db = f2db.f2db('/tmp/f2db')
 >>> db.save(key='foo', val=['bar', 1, 2, None, True])
 >>> db.get('foo')
 ['bar', 1, 2, None, True]
 >>> db.save(key='baz', val='2nd-value')
 >>> list(db.get_iter())
-['2nd-value', None, ['bar', 1, 2, None, True], None, None]
+['2nd-value', ['bar', 1, 2, None, True]]
 >>> db.exists(key='baz')
 True
 >>> db.exists(key='vaz')
