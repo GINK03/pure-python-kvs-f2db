@@ -47,4 +47,10 @@ You can save and restore Python objects as they are
 
 Provides good performance when processing is heavy considering parallel processing  
 
+## ユースケースの例/Example use case
+NFSでリモートのSSDをマウントして、多くのURLインデックスを共有してウェブページをスクレイピングするとき、データを効率的に格納するのに用いることができる。  
+It can be used to efficiently store data when mounting remote SSDs with NFS and sharing many URL indexes and scraping web pages.  
+
+
+
 [Code](https://github.com/GINK03/pure-python-kvs-f2db/tree/master/benchmarks)
