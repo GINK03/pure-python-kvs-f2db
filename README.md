@@ -19,6 +19,9 @@ $ pip3 install f2db
 >>> db.save(key='foo', val=['bar', 1, 2, None, True])
 >>> db.get('foo')
 ['bar', 1, 2, None, True]
+>>> db.save(key='baz', val='2nd-value')
+>>> list(db.get_iter())
+['2nd-value', ['bar', 1, 2, None, True]]
 ```
 keyはstr型、valはpythonのpickleでシリアライズできるオブジェクト型を受け付けることができます。  
 Val can accept object types that can be serialized with pickle, key must to be str type.
