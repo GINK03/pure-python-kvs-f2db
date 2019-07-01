@@ -1,6 +1,6 @@
 # Flash Friendly DB
 
-このソフトウェアはフラッシュストレージに最適化されたPure PythonのKVSです。 
+このソフトウェアはフラッシュストレージに最適化されたPure PythonのKVSです。  
 This software is Pure Python KVS optimized for flash storage.
 
 ## インストール/Install
