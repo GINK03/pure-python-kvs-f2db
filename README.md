@@ -23,9 +23,16 @@ $ pip3 install f2db
 keyはstr型、valはpythonのpickleでシリアライズできるオブジェクト型を受け付けることができます。  
 Val can accept object types that can be serialized with pickle, key must to be str type.
 
-## 特徴
+## 特徴/Features
  - 1. ファイルシステムベースのKVS/File system based KVS
  - 2. LevelDBやRocksDBに比べ並列アクセス、並列書き込みに強い(完全性は保証していない)/
 Stronger in parallel access and parallel writing than LevelDB and RocksDB (completeness is not guaranteed)
  - 3. Pythonのオブジェクトをそのまま保存、復元できる/
 You can save and restore Python objects as they are
+
+## ベンチマーク/Benchmark
+
+<div align="center">
+ <img width="500px" src="https://user-images.githubusercontent.com/4949982/60440147-23e3ec80-9c4f-11e9-8c79-66646b480555.png">
+ <div> Fig. 1 </div>
+</div>
