@@ -37,4 +37,5 @@ You can save and restore Python objects as they are
  <div> Fig. 1 </div>
 </div>
 並列での処理を考慮すると処理が重いとき、良好なパフォーマンスを発揮する  
+
 Provides good performance when processing is heavy considering parallel processing  
