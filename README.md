@@ -36,3 +36,5 @@ You can save and restore Python objects as they are
  <img width="500px" src="https://user-images.githubusercontent.com/4949982/60440147-23e3ec80-9c4f-11e9-8c79-66646b480555.png">
  <div> Fig. 1 </div>
 </div>
+並列での処理を考慮すると処理が重いとき、良好なパフォーマンスを発揮する  
+Provides good performance when processing is heavy considering parallel processing  
