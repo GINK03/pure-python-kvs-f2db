@@ -51,6 +51,9 @@ Provides good performance when processing is heavy considering parallel processi
 NFSでリモートのSSDをマウントして、多くのURLインデックスを共有してウェブページをスクレイピングするとき、データを効率的に格納するのに用いることができる。  
 It can be used to efficiently store data when mounting remote SSDs with NFS and sharing many URL indexes and scraping web pages.  
 
+[Code](https://github.com/GINK03/pure-python-kvs-f2db/tree/master/benchmarks) 
 
-
-[Code](https://github.com/GINK03/pure-python-kvs-f2db/tree/master/benchmarks)
+<div align="center">
+ <img width="600px" src="https://user-images.githubusercontent.com/4949982/60444920-1cc1dc00-9c59-11e9-821d-f40af94b2ab5.png">
+ <div> Fig. 2 </div>
+</div>
