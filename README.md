@@ -42,3 +42,5 @@ You can save and restore Python objects as they are
 並列での処理を考慮すると処理が重いとき、良好なパフォーマンスを発揮する  
 
 Provides good performance when processing is heavy considering parallel processing  
+
+[Code](https://github.com/GINK03/pure-python-kvs-f2db/tree/master/benchmarks)
