@@ -10,11 +10,11 @@ shutil.rmtree('leveldb')
 db = plyvel.DB('leveldb', create_if_missing=True)
 start = time.time()
 
-for i in range(100000):
+for i in range(500000):
     data = DATA(i=i, i_i=i*i, invi=1/(i+1))
     db.put(bytes(str(i), 'utf8'), gzip.compress(pickle.dumps(data)))
 
-for i in range(100000):
+for i in range(500000):
     a = (i, pickle.loads(gzip.decompress(db.get(bytes(str(i), 'utf8')))))
 end = time.time()
 elapsed = end - start
@@ -26,6 +26,8 @@ db = plyvel.DB('leveldb', create_if_missing=True)
 '''
 not conflictiong test
 '''
+
+
 def pmap(arg):
     key, sargs = arg
     try:
@@ -34,9 +36,9 @@ def pmap(arg):
             db.put(bytes(str(i), 'utf8'), gzip.compress(pickle.dumps(data)))
         for i in sargs:
             a = (i, pickle.loads(gzip.decompress(db.get(bytes(str(i), 'utf8')))))
-            #print(i, db.get(bytes(str(i), 'utf8')).decode())
     except exception as ex:
         print(ex)
+
 
 # make_args
 args = {}
@@ -55,7 +57,8 @@ elapsed = end - start
 err_count = 0
 for i in range(100_000):
     try:
-        i2, stores = (i*i, pickle.loads(gzip.decompress(db.get(bytes(str(i), 'utf8')))) )
+        i2, stores = (
+            i*i, pickle.loads(gzip.decompress(db.get(bytes(str(i), 'utf8')))))
     except Exception as ex:
         #print('there is expception', ex, i*i)
         err_count += 1

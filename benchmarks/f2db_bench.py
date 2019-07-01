@@ -12,11 +12,10 @@ except Exception as ex:
 db = f2db.f2db(tar_path='f2db')
 
 start = time.time()
-
-for i in range(100000):
+for i in range(500000):
     db.save(key=str(i), val=DATA(i=i, i_i=i*i, invi=1/(i+1)))
 
-for i in range(100000):
+for i in range(500000):
     a = (i, db.get(key=str(i)))
 end = time.time()
 elapsed = end - start
@@ -42,7 +41,7 @@ shutil.rmtree('f2db')
 db = f2db.f2db(tar_path='f2db')
 # make_args
 args = {}
-for idx, i in enumerate(range(100_000)):
+for idx, i in enumerate(range(500_000)):
     key = idx % 16
     if args.get(key) is None:
         args[key] = []
@@ -55,7 +54,7 @@ with PPE(max_workers=16) as exe:
 end = time.time()
 elapsed = end - start
 err_count = 0
-for i in range(100_000):
+for i in range(500_000):
     try:
         i2, data = (i*i, db.get(key=str(i)))
     except Exception as ex:
