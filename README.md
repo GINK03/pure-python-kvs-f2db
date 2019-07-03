@@ -3,6 +3,9 @@
 このソフトウェアはフラッシュストレージに最適化されたPure PythonのKVSです。  
 This software is Pure Python KVS optimized for flash storage.
 
+## pypi
+ - https://pypi.org/project/f2db/
+
 ## インストール/Install
 Python 3.6以上が必要です。 
 You need Python 3.6 or higher.  
